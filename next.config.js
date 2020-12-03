@@ -29,7 +29,7 @@ module.exports = {
         withModuleFederation(config, options, mfConf);
 
         if (!isServer) {
-            config.output.publicPath = "http://localhost:3000/_next/";
+            config.output.publicPath = process.env.ENV === "dev" ? "http://localhost:3000/_next/" : "http://cto-discovery.netlify.app/_next/";
         }
 
         config.plugins.push(new MergeRuntime());

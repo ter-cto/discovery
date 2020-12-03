@@ -15,7 +15,10 @@ module.exports = {
                 // landing: 'landing@http://cto-landing.netlify.app/_next/static/runtime/remoteEntry.js'
                 // For SSR, resolve to disk path (or you can use code streaming if you have access)
                 landing: isServer
-                    ? "http://cto-landing.netlify.app/_next/static/runtime/remoteEntry.js"
+                    ? path.resolve(
+                        __dirname,
+                        "../landing/.next/server/static/runtime/remoteEntry.js"
+                    )
                     : "landing", // for client, treat it as a global
             },
             exposes: {},

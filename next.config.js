@@ -12,13 +12,14 @@ module.exports = {
             library: { type: config.output.libraryTarget, name: "discovery" },
             filename: "static/runtime/remoteEntry.js",
             remotes: {
+                // landing: 'landing@http://cto-landing.netlify.app/_next/static/runtime/remoteEntry.js'
                 // For SSR, resolve to disk path (or you can use code streaming if you have access)
-                // landing: isServer
-                //     ? path.resolve(
-                //         __dirname,
-                //         "../landing/.next/server/static/runtime/remoteEntry.js"
-                //     )
-                //     : "landing", // for client, treat it as a global
+                landing: isServer
+                    ? path.resolve(
+                        __dirname,
+                        "../landing/.next/server/static/runtime/remoteEntry.js"
+                    )
+                    : "landing", // for client, treat it as a global
             },
             exposes: {},
             shared: [],

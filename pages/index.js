@@ -1,12 +1,12 @@
-// const HeaderBar = (await import("landing/HeaderBar")).default;
-// const Footer = (await import("landing/Footer")).default;
+const HeaderBar = (await import("landing/HeaderBar")).default;
+const Footer = (await import("landing/Footer")).default;
 
 export default function Home() {
   return (
     <div>
-      {/*<HeaderBar />*/}
+      <HeaderBar />
       Discovery page
-      {/*<Footer />*/}
+      <Footer />
     </div>
   )
 }

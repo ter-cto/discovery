@@ -12,6 +12,7 @@ class MyDocument extends Document {
             <Html>
                 {patchSharing()}
                 {/*<script src="http://localhost:4000/_next/static/remoteEntryMerged.js" />*/}
+                <script src="http://cto-landing.netlify.app/_next/static/remoteEntryMerged.js" />
                 <Head />
                 <body>
                 <Main />
